@@ -12,6 +12,7 @@
     keymap {
         compatible = "zmk,keymap";
         default_layer {
+           
             // -----------------------------------------------------------------------------------------
             // |  TAB |  à  |  J  |  O  |  é  |  B  |   |  F  |  D  |  L  |  ?  |  Q  | BKSP |
             // | CTRL |  A  |  I  |  E  |  U  |  ,  |   |  P  |  T  |  S  |  R  |  N  |  !   |
@@ -22,7 +23,7 @@
 &kp TAB     &kp N0  &kp J  &kp O   &kp N2     &kp B        &kp F   &kp D          &kp L   &kp SQT  &kp R  &kp Q
 &kp LCTRL   &kp A   &kp I  &kp E   &kp U      &trans       &kp P   &kp T          &kp S   &kp R    &kp N  &trans
 &kp LSHFT   &kp Y   &kp Y  &trans  &trans     &trans       &kp G   &kp C          &kp W   &kp H    &kp V  &kp Z
-                       &trans  &kp SPACE  &kp ENTER    &trans  &kp BACKSPACE  &trans
+                       &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2      &kp RALT
             >;
         };
 

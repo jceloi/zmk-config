@@ -44,7 +44,7 @@
     keymap {
         compatible = "zmk,keymap";
         default_layer {
-            label = "OPTIMOT"
+            label = "OPTIMOT";
            
             // -----------------------------------------------------------------------------------------
             // |  TAB |  à  |  J  |  O  |  é  |  B  |   |  F  |  D  |  L  |  ’  |  Q  | BKSP |

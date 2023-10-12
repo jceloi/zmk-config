@@ -46,34 +46,35 @@
 / {
 
  behaviors {
-        questionstrophe: questionstrophe {
-            compatible = "zmk,behavior-mod-morph";
-            label = "QUESTIONSTROPHE";
-            #binding-cells = <0>;
-            bindings = <&kp O>, <&question_end_sentence>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
+    questionstrophe: questionstrophe {
+        compatible = "zmk,behavior-mod-morph";
+        label = "QUESTIONSTROPHE";
+        #binding-cells = <0>;
+        bindings = <&kp O>, <&question_end_sentence>;
+        mods = <(MOD_LSFT)>;
+        keep-mods = <(MOD_LSFT)>;
+    };
+    excumflex: excumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EXCUMFLEX";
+        #binding-cells = <0>;
+        bindings = <&kp SQT>, <&excl_end_sentence>;
+        mods = <(MOD_LSFT)>;
+    };
+    dotone: dot_one {
+        compatible = "zmk,behavior-mod-morph";
+        label = "DOT_ONE";
+        #binding-cells = <0>;
+        bindings = <&dot_end_sentence>, <&dottwo>;
+        mods = <(MOD_LSFT|MOD_RALT)>;
+     };
+    dottwo: dot_two {
+        compatible = "zmk,behavior-mod-morph";
+        label = "DOT_TWO";
+        #binding-cells = <0>;
+        bindings = <&kp RA(V)>, <&ellips>;
+        mods = <(MOD_LSFT)>;
         };
-        excumflex: excumflex {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EXCUMFLEX";
-            #binding-cells = <0>;
-            bindings = <&kp SQT>, <&excl_end_sentence>;
-            mods = <(MOD_LSFT)>;
-        };
-        dotone: dot_one {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_ONE";
-            #binding-cells = <0>;
-            bindings = <&dot_end_sentence>, <&dottwo>;
-            mods = <(MOD_LSFT|MOD_RALT)>;
-        };
-        dottwo: dot_two {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_TWO";
-            #binding-cells = <0>;
-            bindings = <&kp RA(V)>, <&ellips>;
-            mods = <(MOD_LSFT)>;
     };
 
     keymap {

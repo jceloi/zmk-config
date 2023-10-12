@@ -41,6 +41,11 @@
                          36   37   38          39   40   41                   \
     /*                 ├────┼────┼────┤      ├────┼────┼────┤              */ \
 
+
+#define DEFAULT 0
+#define NUMPAD 1
+#define NUMROW 2
+
 / {
 
  behaviors {

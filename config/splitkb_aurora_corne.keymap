@@ -265,8 +265,8 @@
             bindings = <
 &kp TAB     &kp N0         &kp J  &kp O    &kp N2     &kp B        &kp F   &kp D          &kp L       &questionstrophe  &kp R  &kp Q
 &kp LCTRL   &kp Q          &kp I  &kp E    &kp U      &trans       &kp P   &kp T          &kp S       &kp R             &kp N  &excumflex
-&kp LSHFT   &out OUT_TOG   &kp Y  &dotone  &dotone    &kp K        &kp G   &kp C          &kp COMMA   &kp H             &kp V  &kp W
-                       &kp CAPS &mo NUMPAD &mo NUMROW       &kp SPACE  &ht DEL BSPC &kp ENTER
+&kp LSHFT   &out OUT_BLE   &kp Y  &dotone  &dotone    &kp K        &kp G   &kp C          &kp COMMA   &kp H             &kp V  &kp W
+                       &kp CAPS &mo NUMPAD &kp SPACE    &mo NUMROW &ht DEL BSPC &kp ENTER
             >;
         };
 

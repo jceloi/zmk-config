@@ -124,7 +124,7 @@
 &kp TAB     &kp N0  &kp J  &kp O    &kp N2     &kp B        &kp F   &kp D          &kp L       &questionstrophe  &kp R  &kp Q
 &kp LCTRL   &kp A   &kp I  &kp E    &kp U      &trans       &kp P   &kp T          &kp S       &kp R             &kp N  &excumflex
 &kp LSHFT   &kp Y   &kp Y  &dotone  &dotone      &kp K       &kp G   &kp C         &kp COMMA   &kp H             &kp V  &kp Z
-                       &kp CAPS &mo NUMPAD &mo NUMROW &kp SPACE  &ht DEL BSPC &kp ENTER
+                       &kp CAPS &mo 1 &mo 2 &kp SPACE  &ht DEL BSPC &kp ENTER
             >;
         };
 

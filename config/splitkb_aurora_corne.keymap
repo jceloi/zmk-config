@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <keymap_frenchsn.h>
 
 #define DEFAULT 0
 #define SENTENCE_CASE 1
@@ -100,14 +101,14 @@
             compatible = "zmk,behavior-mod-morph";
             label = "EXCUMFLEX";
             #binding-cells = <0>;
-            bindings = <&kp SQT>, <&excl_end_sentence>;
+            bindings = <&kp FR_CIRC>, <&excl_end_sentence>;
             mods = <(MOD_LSFT)>;
         };
         questionstrophe: questionstrophe {
             compatible = "zmk,behavior-mod-morph";
             label = "QUESTIONSTROPHE";
             #binding-cells = <0>;
-            bindings = <&kp O>, <&question_end_sentence>;
+            bindings = <&kp FR_QUOT>, <&question_end_sentence>;
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT)>;
         };
@@ -257,15 +258,16 @@
             label = "OPTIMOT";
            
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  à  |  J  |  O  |  é  |  B  |   |  F  |  D  |  L  |  ’  |  Q  | BKSP |
-            // | CTRL |  A  |  I  |  E  |  U  |  ,  |   |  P  |  T  |  S  |  R  |  N  |  !   |
-            // | SHFT |     |  Y  |  è  |  .  |  k  |   |  G  |  C  |  M  |  H  |  V  |  Z   |
-            // 
+            // |  TAB |  à  |  J  |  O  |  é  |  B  |   |  F  |  D  |  L  |  ’? |  Q  |  X   |
+            // | CTRL |  A  |  I  |  E  |  U  |  ,; |   |  P  |  T  |  S  |  R  |  N  |  ^!  |
+            // | SHFT |     |  Y  |  è  |  .: |  K  |   |  G/W  |  C/ç  |  M  |  H  |  V  |  Z   |
+            //                  | CAPS| PAD | SPC |   | NUMRO | BKSP | ENTER |
+           
             
             bindings = <
-&kp TAB     &kp N0         &kp J  &kp O    &kp N2     &kp B        &kp F   &kp D          &kp L       &questionstrophe  &kp R  &kp Q
-&kp LCTRL   &kp Q          &kp I  &kp E    &kp U      &trans       &kp P   &kp T          &kp S       &kp R             &kp N  &excumflex
-&kp LSHFT   &out OUT_BLE   &kp Y  &dotone  &dotone    &kp K        &kp G   &kp C          &kp COMMA   &kp H             &kp V  &kp W
+&kp TAB     &kp FR_AGRV    &kp J  &kp O        &kp FR_EACU     &kp B        &kp F       &kp D          &kp L       &questionstrophe  &kp FR_Q &kp X
+&kp LCTRL   &kp FR_A       &kp I  &kp E        &kp U           &kp FR_COMM  &kp P       &kp T          &kp S       &kp R             &kp N    &excumflex
+&kp LSHFT   &trans         &kp Y  &kp FR_EGRV  &dotone         &kp K        &ht G FR_W  &ht C FR_CCED  &kp COMMA   &kp H             &kp V    &kp FR_Z
                        &kp CAPS &mo NUMPAD &kp SPACE    &mo NUMROW &ht DEL BSPC &kp ENTER
             >;
         };

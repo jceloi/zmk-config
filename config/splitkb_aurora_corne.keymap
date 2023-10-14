@@ -259,14 +259,14 @@
             // -------------------------------------------------------------------------------
             // |  TAB |  à  |  J  |  O  |  é  |  B  |   |  F  |  D  |  L  |  ’? |  Q  |  X   |
             // | CTRL |  A  |  I  |  E  |  U  |  ,; |   |  P  |  T  |  S  |  R  |  N  |  ^!  |
-            // | SHFT |     |  Y  |  è  |  .: |  K  |   | G/W | C/ç |  M  |  H  |  V  |  Z   |
+            // | SHFT |  K  |  Y  |  è  |  .: |  W  |   |  G  | C/ç |  M  |  H  |  V  |  Z   |
             //                  | CAPS| PAD | SPC |   | NUMRO | BKSP | ENTER |
            
             
             bindings = <
 &kp TAB     &kp FR_AGRV    &kp J  &kp O        &kp FR_EACU     &kp B        &kp F       &kp D          &kp L       &questionstrophe  &kp FR_Q &kp X
 &kp LCTRL   &kp FR_A       &kp I  &kp E        &kp U           &kp FR_COMM  &kp P       &kp T          &kp S       &kp R             &kp N    &excumflex
-&kp LSHFT   &kp FR_MINS    &kp Y  &kp FR_EGRV  &dotone         &kp K        &ht FR_W G  &ht FR_CCED C  &kp FR_M    &kp H             &kp V    &kp FR_Z
+&kp LSHFT   &kp FR_K       &kp Y  &kp FR_EGRV  &dotone         &kp FR_W        &kp FR_G  &ht FR_CCED C  &kp FR_M    &kp H             &kp V    &kp FR_Z
                        &kp CAPS &mo NUMPAD &kp SPACE    &kp ENTER &kp BSPC &mo NUMROW  
             >;
         };

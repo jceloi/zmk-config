@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <keymap_frenchs.h>
+#include <keymap_french.h>
 
 #define DEFAULT 0
 #define SENTENCE_CASE 1
@@ -260,7 +260,7 @@
             // -----------------------------------------------------------------------------------------
             // |  TAB |  à  |  J  |  O  |  é  |  B  |   |  F  |  D  |  L  |  ’? |  Q  |  X   |
             // | CTRL |  A  |  I  |  E  |  U  |  ,; |   |  P  |  T  |  S  |  R  |  N  |  ^!  |
-            // | SHFT |     |  Y  |  è  |  .: |  K  |   |  G/W  |  C/ç  |  M  |  H  |  V  |  Z   |
+            // | SHFT |     |  Y  |  è  |  .: |  K  |   | G/W | C/ç |  M  |  H  |  V  |  Z   |
             //                  | CAPS| PAD | SPC |   | NUMRO | BKSP | ENTER |
            
             

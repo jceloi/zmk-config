@@ -115,7 +115,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_ONE";
             #binding-cells = <0>;
-            bindings = <&kp FR_DOT>, <&FR_COLN>;
+            bindings = <&kp FR_DOT>, <&kp FR_COLN>;
             mods = <(MOD_LSFT)>;
         };
         dottwo: dot_two {

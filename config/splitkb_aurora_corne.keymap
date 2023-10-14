@@ -108,16 +108,15 @@
             compatible = "zmk,behavior-mod-morph";
             label = "QUESTIONSTROPHE";
             #binding-cells = <0>;
-            bindings = <&kp FR_QUOT>, <&question_end_sentence>;
+            bindings = <&kp FR_QUOT>, <&kp FR_QUES>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
         dotone: dot_one {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_ONE";
             #binding-cells = <0>;
-            bindings = <&dot_end_sentence>, <&dottwo>;
-            mods = <(MOD_LSFT|MOD_RALT)>;
+            bindings = <&kp FR_DOT>, <&FR_COLN>;
+            mods = <(MOD_LSFT)>;
         };
         dottwo: dot_two {
             compatible = "zmk,behavior-mod-morph";
@@ -267,7 +266,7 @@
             bindings = <
 &kp TAB     &kp FR_AGRV    &kp J  &kp O        &kp FR_EACU     &kp B        &kp F       &kp D          &kp L       &questionstrophe  &kp FR_Q &kp X
 &kp LCTRL   &kp FR_A       &kp I  &kp E        &kp U           &kp FR_COMM  &kp P       &kp T          &kp S       &kp R             &kp N    &excumflex
-&kp LSHFT   &trans         &kp Y  &kp FR_EGRV  &dotone         &kp K        &ht G FR_W  &ht C FR_CCED  &kp COMMA   &kp H             &kp V    &kp FR_Z
+&kp LSHFT   &trans         &kp Y  &kp FR_EGRV  &dotone         &kp K        &ht FR_W G  &ht FR_CCED C  &kp FR_M    &kp H             &kp V    &kp FR_Z
                        &kp CAPS &mo NUMPAD &kp SPACE    &mo NUMROW &ht DEL BSPC &kp ENTER
             >;
         };

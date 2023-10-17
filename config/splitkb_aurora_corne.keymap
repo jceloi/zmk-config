@@ -173,7 +173,7 @@
             bindings = < 
                &kp FR_GRV  &kp FR_AT    &kp FR_QUOT  &kp FR_DQUO  &kp FR_ASTR  &trans       &kp FR_PIPE  &kp FR_MINS &kp FR_UNDS &kp FR_AMPR &kp FR_DEG  &kp BSPC
                &kp FR_SUP2 &kp FR_TILD  &kp FR_LABK  &kp FR_RABK  &kp FR_EQL   &kp FR_DLR   &kp FR_BSLS  &kp FR_LCBR &kp FR_RCBR &kp FR_SLSH &kp FR_DIAE &kp ENTER
-               &trans      &kp A  &kp FR_HASH  &kp FR_PERC  &kp FR_PLUS  &trans       &kp FR_LBRC  &kp FR_LPRN &kp FR_RPRN &kp FR_RBRC &trans      &to L3
+               &trans      &kp FR_EURO  &kp FR_HASH  &kp FR_PERC  &kp FR_PLUS  &trans       &kp FR_LBRC  &kp FR_LPRN &kp FR_RPRN &kp FR_RBRC &trans      &to L3
                                                      &to L1 &trans &trans    &trans &trans &to L4
                 >;
              };
@@ -201,9 +201,9 @@
             //    |  BTCLR   |     BT 1  | BT 2| BT 3| BT 4|OUT_TOG|      |  0  |  1   |  2  |  3  |  X   |   L3    |
             //                                        | L1 | X | X |      |  X  |  X   | L2 |
             bindings = < 
-               &trans             &trans       &trans        &trans       &trans       &trans           &kp FR_ASTR  &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp FR_PLUS   &kp BSPC
-               &rgb_ug RGB_TOG    &bl  BL_TOG  &trans        &trans       &trans       &trans           &kp FR_EQL   &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp FR_MINS   &kp ENTER
-               &bt BT_CLR         &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3 &out OUT_TOG     &kp KP_N0    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT    &to L3
+               &trans             &trans       &trans        &trans       &trans       &trans           &kp FR_ASTR  &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_PLUS   &kp BSPC
+               &rgb_ug RGB_TOG    &bl  BL_TOG  &trans        &trans       &trans       &trans           &kp FR_EQL   &kp FR_4 &kp FR_5 &kp FR_6 &kp FR_MINS   &kp ENTER
+               &bt BT_CLR         &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3 &out OUT_TOG     &kp FR_0     &kp FR_1 &kp FR_2 &kp FR_3 &kp FR_DOT    &to L3
                                                      &to L1 &trans &trans    &trans &trans &to L2
                         >;
                 };

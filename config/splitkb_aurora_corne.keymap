@@ -10,12 +10,10 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "keymap_french.h"
 
-#define DEFAULT 0
-#define SENTENCE_CASE 1
-#define SENTENCE_ALT 2
-#define END_SENTENCE 3
-#define NUMPAD 4
-#define NUMROW 5
+#define L1 0
+#define L2 1
+#define L3 2
+#define L4 3
 
 
 
@@ -102,6 +100,13 @@
             bindings = <&kp FR_COMM>, <&kp FR_SCLN>;
             mods = <(MOD_LSFT)>;
         };
+        points: points {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIRGPTS";
+            #binding-cells = <0>;
+            bindings = <&kp FR_DOT>, <&kp FR_COLN>;
+            mods = <(MOD_LSFT)>;
+        };
         questionstrophe: questionstrophe {
             compatible = "zmk,behavior-mod-morph";
             label = "QUESTIONSTROPHE";
@@ -140,72 +145,65 @@
         compatible = "zmk,keymap";
         default_layer {
             label = "OPTIMOT";
-           
-            // -------------------------------------------------------------------------------
-            // |  TAB |  à  |  J  |  O  |  é  |  B  |   |  F  |  D  |  L  |  ’? |  Q  |  X   |
-            // | CTRL |  A  |  I  |  E  |  U  |  ,; |   |  P  |  T  |  S  |  R  |  N  |  ^!  |
-            // | SHFT |  K  |  Y  |  è  |  .: |  W  |   |  G  | C/ç |  M  |  H  |  V  |  Z   |
-            //                  | CAPS| SPC | PAD |   | SHIFT | ENTER | BSPC |
-
+        
             // -------------------------------------------------------------------------------
             // | TAB  |  à  |  J  |  O  |  é  |  B  |   |  F  |  D  |  L  |  ’? |  Q  |  X   |
             // | ESC  |  A  |  I  |  E  | U/ù |  ,; |   |  P  |  T  |  S  |  R  |  N  |  ^!  |
             // | CTRL |  K  |  Y  |  è  |  .: |  W  |   |  G  | C/ç |  M  |  H  |  V  |  Z   |
-            //                  | CAPS| SPC | SHIFT |   | BSPC | ENTER | L2 |
+            //                  | WIN | SPC | SHIFT |   | BSPC | ENTER | L2 |
            
             
             bindings = <
-&kp TAB     &kp FR_AGRV    &kp J  &kp O        &kp FR_EACU       &kp B           &kp F       &kp D          &kp L       &questionstrophe  &kp FR_Q &kp X
-&kp LCTRL   &kp FR_A       &kp I  &kp E        &ht FR_FR_UGRV U  &virgpts        &kp P       &kp T          &kp S       &kp R             &kp N    &excumflex
-&kp LSHFT   &kp FR_K       &kp Y  &kp FR_EGRV  &dotone           &kp FR_W        &kp FR_G  &ht FR_CCED C  &kp FR_M    &kp H             &kp V    &kp FR_Z
-                       &kp CAPS &kp SPACE &mo NUMPAD   &kp LSHFT &kp ENTER &kp BSPC  
+                &kp TAB     &kp FR_AGRV    &kp J  &kp O        &kp FR_EACU       &kp B           &kp F       &kp D          &kp L       &questionstrophe  &kp FR_Q &kp X
+                &kp LCTRL   &kp FR_A       &kp I  &kp E        &ht FR_FR_UGRV U  &virgpts        &kp P       &kp T          &kp S       &kp R             &kp N    &excumflex
+                &kp LSHFT   &kp FR_K       &kp Y  &kp FR_EGRV  &points           &kp FR_W        &kp FR_G    &ht FR_CCED C  &kp FR_M    &kp H             &kp V    &kp FR_Z
+                                       &kp LWIN &kp SPACE &kp LSHIFT   &kp BSPC &kp ENTER &to L2  
             >;
         };
 
         chars_layer {
-                label = "CHARS";
-// -----------------------------------------------------------------------------------------
-//    |  X  |  @  |  `  |  "  |  *  |   X   |   |  |  |  -   |  _  |  &  |  X  |  X  |
-//    |  X  |  ~  |  <  |  >  |  =  |   $   |   |  \  |  {   |  }  |  /  |  X  |  X  |
-//    |  X  |  €  |  #  |  %  |  +  |   X   |   |  [  |  (   |  )  |  ]  |  X  |  X  |
-//                       | L1 | SPC | SHIFT |   | BSPC | ENTER  | L3 |
-                        bindings = < 
-   &trans  &kp PG_UP &kp HOME  &kp UP       &kp END   &trans       &kp KP_EQUAL    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0    &kp N4
-   &trans &kp PG_DN &kp LEFT  &kp DOWN     &kp RIGHT &trans   &kp KP_ASTERISK &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_SLASH  &kp N7
-   &trans &kp LWIN  &kp LS(DEL) &kp LC(INSERT) &kp LS(INSERT) &kp PSCRN     &kp KP_PLUS    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_MINUS &kp KP_DOT
-                                         &trans &trans &trans    &trans &trans &trans
-                        >;
+                label = "SYMBOLES";
+            // -----------------------------------------------------------------------------------------
+            //    |  `  |  @  |  '  |  "  |  *  |   X   |   |  |  |  -   |  _  |  &  |  °  |  BSPC  |
+            //    |  ²  |  ~  |  <  |  >  |  =  |   $   |   |  \  |  {   |  }  |  /  |  ¨  |  ENTER |
+            //    |  X  |  €  |  #  |  %  |  +  |   X   |   |  [  |  (   |  )  |  ]  |  X  |   L3   |
+            //                       | L1 |  X  |   X   |   |  X  |  X   | L4 |
+                                    bindings = < 
+               &kp FR_GRV  &kp FR_AT    &kp FR_QUOT  &kp FR_DQUO  &kp FR_ASTR  &trans       &kp FR_PIPE  &kp FR_MINS &kp FR_UNDS &kp FR_AMPR &kp FR_DEG  &kp BSPC
+               &kp FR_SUP2 &kp FR_TILD  &kp FR_LABK  &kp FR_RABK  &kp FR_EQL   &kp FR_DLR   &kp FR_BSLS  &kp FR_LCBR &kp FR_RCBR &kp FR_SLSH &kp FR_DIAE &kp ENTER
+               &trans      &kp FR_EURO  &kp FR_HASH  &kp FR_PERC  &kp FR_PLUS  &trans       &kp FR_LBRC  &kp FR_LPRN &kp FR_RPRN &kp FR_RBRC &trans      &to L3
+                                                     &to L1 &trans &trans    &trans &trans &to L4
+                                    >;
                 };
 
-                                    
+                  nav_layer {
+                        label = "NAVIG";
+// -----------------------------------------------------------------------------------------
+//                 |  F1  |  F2 |  F3 |  F4 |  F5 |  F6 |   |  PUP  |  HOME |  ↑  | END |  X  |  BSPC  |
+//                 |  F7  |  F8 |  F9 | F10 | F11 | F12 |   |  PDN  |   ←   |  ↓  |  →  |  X  |  ENTER |
+//                 | PREV | NEXT| PLAY| VUP | VDWN| MUTE|   |   X   |    X  |  X  |  X  |  X  |    X   |
+//                                         | L1 | X | X |   | ALT | X | L2 |
+                        bindings = <
+   &kp F1     &kp F2     &kp F3   &kp F4        &kp F5        &kp F6      &kp PG_UP   &kp HOME   &kp UP    &kp END   &trans &kp BSPC
+   &kp F7     &kp F8     &kp F9   &kp F10       &kp F11       &kp F12     &kp PG_DN   &kp LEFT   &kp DOWN  &kp RIGHT &trans &kp ENTER
+   &kp C_PREV &kp C_NEXT &kp C_PP &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  &trans      &trans     &trans    &trans    &trans &trans
+                                     &to L1 &trans &trans    &kp LALT &trans &to L2
+         >;
+                };     
+
                 numpad_layer {
                         label = "NUMPAD";
 // -----------------------------------------------------------------------------------------
-//    | ESC | PUP | HOME|  ↑  | END |   B   |   |  *  |  7   |  8  |  9  |  +  |  (  |
-//    |  Ê  | PDN |  ←  |  ↓  |  →  |   ,   |   |  =  |  4   |  5  |  6  |  -  |  )  |
-//    | TAB | WIN | CUT | CPY | PST | PSCRN |   |  0  |  1   |  2  |  3  |  /  |  .  |
-//                       | L1 | PAD | ROW |   | SPC | BKSP | ENTER |
+//    | X        | X         |  X  |  X  |  X  |   X   |      |  *  |  7   |  8  |  9  |  +   |  BSPC   |
+//    | RGB_TOG  | BACKL_TOG |  X  |  X  |  X  |   X   |      |  =  |  4   |  5  |  6  |  -   |  ENTER  |
+//    |  BTCLR   |     BT 1  | BT 2| BT 3| BT 4|OUT_TOG|      |  0  |  1   |  2  |  3  |  X   |   L3    |
+//                                        | L1 | X | X |      |  X  |  X   | L2 |
                         bindings = < 
-   &trans  &kp PG_UP &kp HOME  &kp UP       &kp END   &trans       &kp KP_EQUAL    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0    &kp N4
-   &trans &kp PG_DN &kp LEFT  &kp DOWN     &kp RIGHT &trans   &kp KP_ASTERISK &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_SLASH  &kp N7
-   &trans &kp LWIN  &kp LS(DEL) &kp LC(INSERT) &kp LS(INSERT) &kp PSCRN     &kp KP_PLUS    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_MINUS &kp KP_DOT
-                                         &trans &trans &trans    &trans &trans &trans
+   &trans             &trans       &trans    &trans    &trans    &trans         &kp FR_ASTR  &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp FR_PLUS   &kp BSPC
+   &rgb_ug RGB_TOG    &bl  BL_TOG  &trans    &trans    &trans    &trans         &kp FR_EQL   &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp FR_MINS   &kp ENTER
+   &BT_CLR &BT_SEL 0  &BT_SEL 1    &BT_SEL 2 &BT_SEL 3 &out OUT_TOG             &kp KP_N0    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT    &to L3
+                                         &to L1 &trans &trans    &trans &trans &to L2
                         >;
-                };
-
-                chars_layer {
-                        label = "NAV";
-// -----------------------------------------------------------------------------------------
-//                 |  F1  |  F2 |  F3 |  F4 |  F5 |  F6 |   |  F7 |  HOME |  ↑  | END | F11 | F12 |
-//                 |  $   |  1  |  2  |  3  |  4  |  5  |   |  6  |   ←   |  ↓  |  →  |  0  |  =  |
-//                 | PREV| NEXT| PLAY | VUP | VDWN| MUTE|   |BTCLR| BT 1| BT 2| BT 3| BT 4|  %  |
-//                                    |CAPS | PAD | ROW |   | SPC | BKSP | ENTER |
-                        bindings = <
-   &kp F1    &kp F2 &kp F3     &kp F4     &kp F5   &kp F6    &kp F7 &kp F8        &kp F9        &kp F10   &kp F11 &kp F12
-   &kp GRAVE &lh_hm LALT N1 &lh_hm LCTRL N2     &lh_hm RALT N3    &lh_hm LSHFT N4   &kp N5    &kp N6 &rh_hm LSHFT N7        &rh_hm RALT N8        &rh_hm LCTRL N9    &rh_hm LALT N0  &kp MINUS
-   &kp C_PREV &kp C_NEXT &kp C_PP &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3   &kp EQUAL
-                                     &trans &trans &trans    &trans &trans &trans
-         >;
                 };
 
 

@@ -173,7 +173,7 @@
             bindings = < 
                &kp FR_GRV  &kp FR_AT    &kp FR_QUOT  &kp FR_DQUO  &kp FR_ASTR  &trans       &kp FR_PIPE  &kp FR_MINS &kp FR_UNDS &kp FR_AMPR &kp FR_DEG  &kp BSPC
                &kp FR_SUP2 &kp FR_TILD  &kp FR_LABK  &kp FR_RABK  &kp FR_EQL   &kp FR_DLR   &kp FR_BSLS  &kp FR_LCBR &kp FR_RCBR &kp FR_SLSH &kp FR_DIAE &kp ENTER
-               &trans      &kp FR_EURO  &kp FR_HASH  &kp FR_PERC  &kp FR_PLUS  &trans       &kp FR_LBRC  &kp FR_LPRN &kp FR_RPRN &kp FR_RBRC &trans      &to L3
+               &trans      &kp A  &kp FR_HASH  &kp FR_PERC  &kp FR_PLUS  &trans       &kp FR_LBRC  &kp FR_LPRN &kp FR_RPRN &kp FR_RBRC &trans      &to L3
                                                      &to L1 &trans &trans    &trans &trans &to L4
                 >;
              };

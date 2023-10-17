@@ -201,9 +201,9 @@
             //    |  BTCLR   |     BT 1  | BT 2| BT 3| BT 4|OUT_TOG|      |  0  |  1   |  2  |  3  |  X   |   L3    |
             //                                        | L1 | X | X |      |  X  |  X   | L2 |
             bindings = < 
-               &trans             &trans       &trans    &trans    &trans    &trans         &kp FR_ASTR  &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp FR_PLUS   &kp BSPC
-               &rgb_ug RGB_TOG    &bl  BL_TOG  &trans    &trans    &trans    &trans         &kp FR_EQL   &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp FR_MINS   &kp ENTER
-               &BT_CLR &BT_SEL 0  &BT_SEL 1    &BT_SEL 2 &BT_SEL 3 &out OUT_TOG             &kp KP_N0    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT    &to L3
+               &trans             &trans       &trans        &trans       &trans       &trans           &kp FR_ASTR  &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp FR_PLUS   &kp BSPC
+               &rgb_ug RGB_TOG    &bl  BL_TOG  &trans        &trans       &trans       &trans           &kp FR_EQL   &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp FR_MINS   &kp ENTER
+               &bt BT_CLR         &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3 &out OUT_TOG     &kp KP_N0    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT    &to L3
                                                      &to L1 &trans &trans    &trans &trans &to L2
                         >;
                 };

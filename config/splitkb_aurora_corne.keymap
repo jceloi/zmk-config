@@ -23,7 +23,7 @@
                             /* Home Row Mods */
 /*****************************************************************************/
 
-/* Left hand key positions for use with right hand mods */
+/* Left hand key positions fo[sr use with right hand mods */
 #define LEFT_HAND_KEYS \
     /*    ┌────┬────┬────┬────┬────┐                                       */ \
             0    1    2    3    4     5                                       \
@@ -157,8 +157,8 @@
             
             bindings = <
                 &kp TAB     &kp FR_AGRV    &kp J  &kp O        &kp FR_EACU       &kp B           &kp F       &kp D          &kp L       &questionstrophe  &kp FR_Q &kp X
-                &kp LCTRL   &kp FR_A       &kp I  &kp E        &ht FR_UGRV U     &virgpts        &kp P       &kp T          &kp S       &kp R             &kp N    &excumflex
-                &kp LSHFT   &kp FR_K       &kp Y  &kp FR_EGRV  &points           &kp FR_W        &kp FR_G    &ht FR_CCED C  &kp FR_M    &kp H             &kp V    &kp FR_Z
+                &kp ESC   &kp FR_A       &kp I  &kp E        &ht FR_UGRV U     &virgpts        &kp P       &kp T          &kp S       &kp R             &kp N    &excumflex
+                &kp LCTRL   &kp FR_K       &kp Y  &kp FR_EGRV  &points           &kp FR_W        &kp FR_G    &ht FR_CCED C  &kp FR_M    &kp H             &kp V    &kp FR_Z
                                        &kp LWIN &kp SPACE &kp LSHIFT   &kp BSPC &kp ENTER &to L2  
             >;
         };

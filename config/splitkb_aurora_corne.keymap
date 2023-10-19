@@ -164,7 +164,7 @@
         combo_mo_num { // TR
             timeout-ms = <30>;
             key-positions = <19 21>;
-            bindings = <&sl L4;
+            bindings = <&sl L4>;
         };
     };
 

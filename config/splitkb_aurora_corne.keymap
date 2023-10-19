@@ -141,6 +141,18 @@
             key-positions = <27 28>;
             bindings = <&kp LS(INSERT)>;
         };
+
+        combo_dash { // DL
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp FR_MINS>;
+        };
+
+        combo_mo_symb { // TS
+            timeout-ms = <50>;
+            key-positions = <19 20>;
+            bindings = <&mo 2>;
+        };
     };
 
     keymap {
@@ -157,7 +169,7 @@
             
             bindings = <
                 &kp TAB     &kp FR_AGRV    &kp J  &kp O        &kp FR_EACU       &kp B           &kp F       &kp D          &kp L       &questionstrophe  &kp FR_Q &kp X
-                &kp ESC   &kp FR_A       &kp I  &kp E        &ht FR_UGRV U     &virgpts        &kp P       &kp T          &kp S       &kp R             &kp N    &excumflex
+                &kp ESC     &kp FR_A       &kp I  &kp E        &ht FR_UGRV U     &virgpts        &kp P       &kp T          &kp S       &kp R             &kp N    &excumflex
                 &kp LCTRL   &kp FR_K       &kp Y  &kp FR_EGRV  &points           &kp FR_W        &kp FR_G    &ht FR_CCED C  &kp FR_M    &kp H             &kp V    &kp FR_Z
                                        &kp LWIN &kp SPACE &kp LSHIFT   &kp BSPC &kp ENTER &to L2  
             >;
@@ -165,25 +177,25 @@
 
         symb_layer {
             label = "SYMBOLES";
-            // -----------------------------------------------------------------------------------------
+            // --------------------------------------------------------------------------------------
             //    |  `  |  @  |  '  |  "  |  *  |   X   |   |  |  |  -   |  _  |  &  |  °  |  BSPC  |
             //    |  ²  |  ~  |  <  |  >  |  =  |   $   |   |  \  |  {   |  }  |  /  |  ¨  |  ENTER |
-            //    |  X  |  €  |  #  |  %  |  +  |   X   |   |  [  |  (   |  )  |  ]  |  X  |   L3   |
+            //    |  X  |  €  |  #  |  %  |  +  |   X   |   |  [  |  (   |  )  |  ]  |  ↑  |   L3   |
             //                       | L1 |  X  |   X   |   |  X  |  X   | L4 |
             bindings = < 
                &kp FR_GRV  &kp FR_AT    &kp FR_QUOT  &kp FR_DQUO  &kp FR_ASTR  &trans       &kp FR_PIPE  &kp FR_MINS &kp FR_UNDS &kp FR_AMPR &kp FR_DEG  &kp BSPC
                &kp FR_SUP2 &kp FR_TILD  &kp FR_LABK  &kp FR_RABK  &kp FR_EQL   &kp FR_DLR   &kp FR_BSLS  &kp FR_LCBR &kp FR_RCBR &kp FR_SLSH &kp FR_DIAE &kp ENTER
-               &trans      &kp FR_EURO  &kp FR_HASH  &kp FR_PERC  &kp FR_PLUS  &trans       &kp FR_LBRC  &kp FR_LPRN &kp FR_RPRN &kp FR_RBRC &trans      &to L3
+               &trans      &kp FR_EURO  &kp FR_HASH  &kp FR_PERC  &kp FR_PLUS  &trans       &kp FR_LBRC  &kp FR_LPRN &kp FR_RPRN &kp FR_RBRC &kp UP      &to L3
                                                      &to L1 &trans &trans    &trans &trans &to L4
                 >;
              };
 
         nav_layer {
             label = "NAVIG";
-            // -----------------------------------------------------------------------------------------
+            // -----------------------------------------------------------------------------------------------------
             //                 |  F1  |  F2 |  F3 |  F4 |  F5 |  F6 |   |  PUP  |  HOME |  ↑  | END |  X  |  BSPC  |
             //                 |  F7  |  F8 |  F9 | F10 | F11 | F12 |   |  PDN  |   ←   |  ↓  |  →  |  X  |  ENTER |
-            //                 | PREV | NEXT| PLAY| VUP | VDWN| MUTE|   |   X   |    X  |  X  |  X  |  X  |    X   |
+            //                 | PREV | NEXT| PLAY| VUP | VDWN| MUTE|   |   X   |    X  |  X  |  X  |  x  |    X   |
             //                                         | L1 | X | X |   | ALT | X | L2 |
             bindings = <
                &kp F1     &kp F2     &kp F3   &kp F4        &kp F5        &kp F6      &kp PG_UP   &kp HOME   &kp UP    &kp END   &trans &kp BSPC

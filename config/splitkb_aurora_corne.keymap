@@ -177,14 +177,14 @@
             // | TAB  |  à  |  J  |  O  |  é  |  B  |   |  F  |  D  |  L  |  ’? |  Q  |  X   |
             // | ESC  |  A  |  I  |  E  | U/ù |  ,; |   |  P  |  T  |  S  |  R  |  N  |  ^!  |
             // | CTRL |  K  |  Y  |  è  |  .: |  W  |   |  G  | C/ç |  M  |  H  |  V  |  Z   |
-            //                  | WIN | SHIFT | SPC |   | ENTER | BSPC | L2 |
+            //                  | WIN | SHIFT | SPC |   |BSPC |ENTER| L2 |
            
             
             bindings = <
                 &kp TAB     &kp FR_AGRV    &kp J  &kp O        &kp FR_EACU       &kp B           &kp F       &kp D          &kp L       &questionstrophe  &kp FR_Q &kp X
                 &kp ESC     &kp FR_A       &kp I  &kp E        &ht FR_UGRV U     &virgpts        &kp P       &kp T          &kp S       &kp R             &kp N    &excumflex
                 &kp LCTRL   &kp FR_K       &kp Y  &kp FR_EGRV  &points           &kp FR_W        &kp FR_G    &ht FR_CCED C  &kp FR_M    &kp H             &kp V    &kp FR_Z
-                                   &kp LWIN &kp LSHIFT &kp SPACE   &kp ENTER &kp BSPC &to L2  
+                                   &kp LWIN &kp LSHIFT &kp SPACE   &kp BSPC &kp ENTER &to L2  
             >;
         };
 

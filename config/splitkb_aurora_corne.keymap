@@ -18,6 +18,10 @@
 #define L3 2
 #define L4 3
 
+&nice_view_spi {
+    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
+};
+
 
 
 /*****************************************************************************/

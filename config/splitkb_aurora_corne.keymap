@@ -367,7 +367,7 @@
            
             
             bindings = <
-                &trans     &trans       &trans  &trans   &trans       &kp LCMD(LSHFT(FR_5))       &trans       &trans          &trans    &trans  &trans    &trans
+                &trans     &trans       &trans  &trans   &trans       &kp LCMD(LS(FR_5))       &trans       &trans          &trans    &trans  &trans    &trans
                 &trans     &trans       &trans  &trans   &trans       &trans                      &trans       &trans          &trans    &trans  &trans    &trans
                 &trans     &trans       &trans  &trans   &trans       &trans                      &trans       &trans          &trans    &trans  &trans    &trans
                                                  &trans       &trans  &trans                      &trans       &trans        &trans  

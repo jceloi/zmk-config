@@ -312,14 +312,14 @@
             label = "OPTIWIN";
         
             // -------------------------------------------------------------------------------
-            // | X  |  X  |  X  |  X  |  X  |PSCRN|   |  X  |  X  |  X  |  X  |  X  |  X   |
+            // | X  |  X  |  X  |  X  |  X  |  X  |   |  X  |  X  |  X  |  X  |  X  |  X   |
             // | X  |  X  |  X  |  X  |  X  |  X  |   |  X  |  X  |  X  |  X  |  X  |  X   |
             // | X  |  X  |  X  |  X  |  X  |  X  |   |  X  |  X  |  X  |  X  |  X  |  X   |
             //                  |  X  |  X  |  X  |   |  X  |  X  |  X  |
            
             
             bindings = <
-                &trans     &trans       &trans  &trans        &trans       &kp PSCRN     &trans       &trans          &trans    &trans  &trans    &trans
+                &trans     &trans       &trans  &trans        &trans       &trans        &trans       &trans          &trans    &trans  &trans    &trans
                 &trans     &trans       &trans  &trans        &trans       &trans        &trans       &trans          &trans    &trans  &trans    &trans
                 &trans     &trans       &trans  &trans        &trans       &trans        &trans       &trans          &trans    &trans  &trans    &trans
                            &trans       &trans  &trans        &trans       &trans        &trans  
@@ -330,14 +330,14 @@
             label = "OPTIMAC";
         
             // -------------------------------------------------------------------------------
-            // | X  |  X  |  X  |  X  |  X  |PSCRN|   |  X  |  X  |  X  |  X  |  X  |  X   |
+            // | X  |  X  |  X  |  X  |  X  |  X  |   |  X  |  X  |  X  |  X  |  X  |  X   |
             // | X  |  X  |  X  |  X  |  X  |  X  |   |  X  |  X  |  X  |  X  |  X  |  X   |
             // | X  |  X  |  X  |  X  |  X  |  X  |   |  X  |  X  |  X  |  X  |  X  |  X   |
             //                  |  X  |  X  |  X  |   |  X  |  X  |  X  |
            
             
             bindings = <
-                &trans     &trans       &trans  &trans   &trans       &kp LG(LS(N5))              &trans       &trans          &trans    &trans  &trans    &trans
+                &trans     &trans       &trans  &trans   &trans       &trans                      &trans       &trans          &trans    &trans  &trans    &trans
                 &trans     &trans       &trans  &trans   &trans       &trans                      &trans       &trans          &trans    &trans  &trans    &trans
                 &trans     &trans       &trans  &trans   &trans       &trans                      &trans       &trans          &trans    &trans  &trans    &trans
                                                  &trans       &trans  &trans                      &trans       &trans        &trans  
@@ -347,12 +347,12 @@
         numpad_layer {
             label = "NUMPAD";
             // -----------------------------------------------------------------------------------------
-            //    | X        | X         | WIN | MAC |  X  | X   |      |  *  |  7   |  8  |  9  |  +   |  BSPC   |
+            //    | X        | X         | WIN | MAC |  X  | PRINTMAC|      |  *  |  7   |  8  |  9  |  +   |  BSPC   |
             //    | RGB_TOG  | BACKL_TOG |  X  |  X  |  X  | X       |      |  =  |  4   |  5  |  6  |  -   |  ENTER  |
             //    |  BTCLR   |     BT 1  | BT 2| BT 3| BT 4| OUT_TOG |      |  0  |  1   |  2  |  3  |  X   |   L3    |
             //                                          | L1 | X | X |      |  X  |  X   |  L2  |
             bindings = < 
-               &trans             &trans       &tog WIN      &tog MAC     &trans       &trans          &kp FR_ASTR  &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_PLUS   &kp BSPC
+               &trans             &trans       &tog WIN      &tog MAC     &trans       &kp LG(LS(N5))     &kp FR_ASTR  &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_PLUS   &kp BSPC
                &rgb_ug RGB_TOG    &bl  BL_TOG  &trans        &trans       &trans       &trans             &kp FR_EQL   &kp FR_4 &kp FR_5 &kp FR_6 &kp FR_MINS   &kp ENTER
                &bt BT_CLR         &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3 &out OUT_TOG       &kp FR_0     &kp FR_1 &kp FR_2 &kp FR_3 &kp FR_DOT    &to_L3_from_L4
                                                                           &to_L1_from_L4 &trans &trans    &trans &trans &to_L2_from_L4

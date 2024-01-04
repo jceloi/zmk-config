@@ -347,14 +347,14 @@
         numpad_layer {
             label = "NUMPAD";
             // -----------------------------------------------------------------------------------------
-            //    | X        | X         | WIN | MAC |  X  | PRINTMAC|      |  *  |  7   |  8  |  9  |  +   |  BSPC   |
-            //    | RGB_TOG  | BACKL_TOG |  X  |  X  |  X  | X       |      |  =  |  4   |  5  |  6  |  -   |  ENTER  |
-            //    |  BTCLR   |     BT 1  | BT 2| BT 3| BT 4| OUT_TOG |      |  0  |  1   |  2  |  3  |  X   |   L3    |
+            //    |    X  | BT_NXT | WIN | MAC |  X  | PRINTMAC|      |  *  |  7   |  8  |  9  |  +   |  BSPC   |
+            //    |    X  | BTCLR  |  X  |  X  |  X  | X       |      |  =  |  4   |  5  |  6  |  -   |  ENTER  |
+            //    |    X  | X      |  X  |  X  |  X  | OUT_TOG |      |  0  |  1   |  2  |  3  |  X   |   L3    |
             //                                          | L1 | X | X |      |  X  |  X   |  L2  |
             bindings = < 
-               &trans             &trans       &tog WIN      &tog MAC     &trans       &kp LG(LS(N5))     &kp FR_ASTR  &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_PLUS   &kp BSPC
-               &rgb_ug RGB_TOG    &bl  BL_TOG  &trans        &trans       &trans       &trans             &kp FR_EQL   &kp FR_4 &kp FR_5 &kp FR_6 &kp FR_MINS   &kp ENTER
-               &bt BT_CLR         &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3 &out OUT_TOG       &kp FR_0     &kp FR_1 &kp FR_2 &kp FR_3 &kp FR_DOT    &to_L3_from_L4
+               &trans    &bt BT_NXT   &tog WIN      &tog MAC     &trans       &kp LG(LS(N5))     &kp FR_ASTR  &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_PLUS   &kp BSPC
+               &trans    &bt BT_CLR   &trans        &trans       &trans       &trans             &kp FR_EQL   &kp FR_4 &kp FR_5 &kp FR_6 &kp FR_MINS   &kp ENTER
+               &trans    &trans       &trans        &trans       &trans       &out OUT_TOG       &kp FR_0     &kp FR_1 &kp FR_2 &kp FR_3 &kp FR_DOT    &to_L3_from_L4
                                                                           &to_L1_from_L4 &trans &trans    &trans &trans &to_L2_from_L4
                         >;
                 };
@@ -363,12 +363,12 @@
             label = "SYMBOLES";
             // --------------------------------------------------------------------------------------
             //    |  `  |  @  |  '  |  "  |  *  |   X   |   |  |  |  -   |  _  |  &  |  °  |  BSPC  |
-            //    |  ²  |  ~  |  <  |  >  |  =  |   $   |   |  \  |  {   |  }  |  /  |  ¨  |  ENTER |
+            //    |  ²  |  ~  |  <  |  >  |  =  |   $   |   |  \  |  {   |  }  |  /  |  ~  |    ¨   |
             //    |  X  |  €  |  #  |  %  |  +  |   X   |   |  [  |  (   |  )  |  ]  |  ↑  |   L3   |
             //                       | L1 | ALT |   X   |   |  X  |  X   | L4 |
             bindings = < 
                &kp FR_GRV  &kp FR_AT    &kp FR_QUOT  &kp FR_DQUO    &kp FR_ASTR  &trans       &kp FR_PIPE  &kp FR_MINS &kp FR_UNDS &kp FR_AMPR &kp FR_DEG  &kp BSPC
-               &kp FR_SUP2 &kp FR_TILD  &kp FR_LABK  &kp FR_RABK    &kp FR_EQL   &kp FR_DLR   &kp FR_BSLS  &kp FR_LCBR &kp FR_RCBR &kp FR_SLSH &kp FR_DIAE &kp ENTER
+               &kp FR_SUP2 &kp FR_TILD  &kp FR_LABK  &kp FR_RABK    &kp FR_EQL   &kp FR_DLR   &kp FR_BSLS  &kp FR_LCBR &kp FR_RCBR &kp FR_SLSH &kp FR_TILD &kp FR_DIAE
                &trans      &kp FR_EURO  &kp FR_HASH  &kp FR_PERC    &kp FR_PLUS  &trans       &kp FR_LBRC  &kp FR_LPRN &kp FR_RPRN &kp FR_RBRC &kp UP      &to_L3_from_L2
                                                      &to_L1_from_L2 &kp LALT &trans    &trans &trans &to_L4_from_L2
                 >;
@@ -380,7 +380,7 @@
             //                 |  F1  |  F2 |  F3 |  F4 |  F5 |  F6 |   |  PUP  |  HOME |  ↑  | END |  X  |  BSPC  |
             //                 |  F7  |  F8 |  F9 | F10 | F11 | F12 |   |  PDN  |   ←   |  ↓  |  →  |  X  |  ENTER |
             //                 | PREV | NEXT| PLAY| VUP | VDWN| MUTE|   |   X   |    X  |  X  |  X  |  x  |    X   |
-            //                                     | L1 |  X  |  X  |   |   X   |  X  | L2 |
+            //                                     | L1 |  X  |  X  |   |   X   |    X  |  L2 |
             bindings = <
                &kp F1     &kp F2     &kp F3   &kp F4         &kp F5        &kp F6      &kp PG_UP   &kp HOME   &kp UP    &kp END   &trans &kp BSPC
                &kp F7     &kp F8     &kp F9   &kp F10        &kp F11       &kp F12     &kp PG_DN   &kp LEFT   &kp DOWN  &kp RIGHT &trans &kp ENTER

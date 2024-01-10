@@ -362,14 +362,14 @@
         symb_layer {
             label = "SYMBOLES";
             // --------------------------------------------------------------------------------------
-            //    |  `  |  @  |  '  |  "  |  *  |   X   |   |  |  |  -   |  _  |  &  |  °  |  BSPC  |
-            //    |  ²  |  ~  |  <  |  >  |  =  |   $   |   |  \  |  {   |  }  |  /  |  ~  |    ¨   |
-            //    |  X  |  €  |  #  |  %  |  +  |   X   |   |  [  |  (   |  )  |  ]  |  ↑  |   L3   |
+            //    |  X  |  @  |  '  |  "  |  *  |   `   |   |  |  |  -   |  _  |  &  |  °  |  BSPC  |
+            //    |  X  |  ~  |  <  |  >  |  =  |   $   |   |  \  |  {   |  }  |  /  |  ~  |    ¨   |
+            //    |  X  |  €  |  #  |  %  |  +  |   ²   |   |  [  |  (   |  )  |  ]  |  ↑  |   L3   |
             //                       | L1 | ALT |   X   |   |  X  |  X   | L4 |
             bindings = < 
-               &kp FR_GRV  &kp FR_AT    &kp FR_QUOT  &kp FR_DQUO    &kp FR_ASTR  &trans       &kp FR_PIPE  &kp FR_MINS &kp FR_UNDS &kp FR_AMPR &kp FR_DEG  &kp BSPC
-               &kp FR_SUP2 &kp FR_TILD  &kp FR_LABK  &kp FR_RABK    &kp FR_EQL   &kp FR_DLR   &kp FR_BSLS  &kp FR_LCBR &kp FR_RCBR &kp FR_SLSH &kp FR_TILD &kp FR_DIAE
-               &trans      &kp FR_EURO  &kp FR_HASH  &kp FR_PERC    &kp FR_PLUS  &trans       &kp FR_LBRC  &kp FR_LPRN &kp FR_RPRN &kp FR_RBRC &kp UP      &to_L3_from_L2
+               &trans    &kp FR_AT    &kp FR_QUOT  &kp FR_DQUO    &kp FR_ASTR  &kp FR_GRV       &kp FR_PIPE  &kp FR_MINS &kp FR_UNDS &kp FR_AMPR &kp FR_DEG  &kp BSPC
+               &trans    &kp FR_TILD  &kp FR_LABK  &kp FR_RABK    &kp FR_EQL   &kp FR_DLR       &kp FR_BSLS  &kp FR_LCBR &kp FR_RCBR &kp FR_SLSH &kp FR_TILD &kp FR_DIAE
+               &trans    &kp FR_EURO  &kp FR_HASH  &kp FR_PERC    &kp FR_PLUS  &kp FR_SUP2      &kp FR_LBRC  &kp FR_LPRN &kp FR_RPRN &kp FR_RBRC &kp UP     &to_L3_from_L2
                                                      &to_L1_from_L2 &kp LALT &trans    &trans &trans &to_L4_from_L2
                 >;
              };

@@ -287,6 +287,25 @@
             bindings = <&sl L4>;
         };
 
+        combo_mo_symb_l { // TS
+            timeout-ms = <30>;
+            key-positions = <14 15>;
+            bindings = <&sl L2>;
+        };
+
+
+        combo_mo_nav_l { // SR
+            timeout-ms = <30>;
+            key-positions = <15 16>;
+            bindings = <&sl L3>;
+        };
+
+        combo_mo_num_l { // TR
+            timeout-ms = <30>;
+            key-positions = <14 16>;
+            bindings = <&sl L4>;
+        };
+
         combo_clear_bt { // TR
             timeout-ms = <30>;
             key-positions = <1 2 3>;

@@ -289,14 +289,14 @@
 
         combo_mo_symb_l { // TS
             timeout-ms = <30>;
-            key-positions = <14 15>;
+            key-positions = <15 16>;
             bindings = <&sl L2>;
         };
 
 
         combo_mo_nav_l { // SR
             timeout-ms = <30>;
-            key-positions = <15 16>;
+            key-positions = <14 15>;
             bindings = <&sl L3>;
         };
 

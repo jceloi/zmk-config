@@ -306,10 +306,28 @@
             bindings = <&sl L4>;
         };
 
-        combo_clear_bt { // TR
+        combo_clear_bt { //àjo
             timeout-ms = <30>;
             key-positions = <1 2 3>;
             bindings = <&bt BT_CLR>;
+        };
+
+        combo_cedille { // cm
+            timeout-ms = <30>;
+            key-positions = <31 32>;
+            bindings = <&kp FR_CCED>;
+        };
+
+        combo_ugrave { // u,
+            timeout-ms = <30>;
+            key-positions = <16 17>;
+            bindings = <&kp FR_UGRV>;
+        };
+
+        combo_oe { // oe
+            timeout-ms = <30>;
+            key-positions = <3 15>;
+            bindings = <&kp LALT(o)>;
         };
     };
 

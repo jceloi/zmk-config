@@ -13,11 +13,9 @@
 #include "keymap_french.h"
 
 #define L1  0
-#define WIN 1
-#define MAC 2
-#define L4  3
-#define L2  4
-#define L3  5
+#define L4  1
+#define L2  2
+#define L3  3
 
 &nice_view_spi {
     cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
@@ -220,27 +218,6 @@
     combos { 
         compatible = "zmk,combos";
 
-        combo_cut_win { // KY
-            timeout-ms = <50>;
-            key-positions = <25 26>;
-            bindings = <&kp LS(DELETE)>;
-            layers = <WIN>;
-        };
-
-        combo_copy_win { // YÈ
-            timeout-ms = <50>;
-            key-positions = <26 27>;
-            bindings = <&kp LC(INSERT)>;
-            layers = <WIN>;
-        };
-
-        combo_paste_win { // È‧
-            timeout-ms = <50>;
-            key-positions = <27 28>;
-            bindings = <&kp LS(INSERT)>;
-            layers = <WIN>;
-        };
-
         combo_cut_mac { // KY
             timeout-ms = <50>;
             key-positions = <25 26>;
@@ -350,53 +327,18 @@
                                    &kp LWIN &kp LSHIFT &kp SPACE   &kp BSPC &kp ENTER &tog L2  
             >;
         };
-
-        win_layer {
-            label = "OPTIWIN";
-        
-            // -------------------------------------------------------------------------------
-            // | X  |  X  |  X  |  X  |  X  |  X  |   |  X  |  X  |  X  |  X  |  X  |  X   |
-            // | X  |  X  |  X  |  X  |  X  |  X  |   |  X  |  X  |  X  |  X  |  X  |  X   |
-            // | X  |  X  |  X  |  X  |  X  |  X  |   |  X  |  X  |  X  |  X  |  X  |  X   |
-            //                  |  X  |  X  |  X  |   |  X  |  X  |  X  |
            
-            
-            bindings = <
-                &trans     &trans       &trans  &trans        &trans       &trans        &trans       &trans          &trans    &trans  &trans    &trans
-                &trans     &trans       &trans  &trans        &trans       &trans        &trans       &trans          &trans    &trans  &trans    &trans
-                &trans     &trans       &trans  &trans        &trans       &trans        &trans       &trans          &trans    &trans  &trans    &trans
-                           &trans       &trans  &trans        &trans       &trans        &trans  
-            >;
-        };
-
-        mac_layer {
-            label = "OPTIMAC";
-        
-            // -------------------------------------------------------------------------------
-            // | X  |  X  |  X  |  X  |  X  |  X  |   |  X  |  X  |  X  |  X  |  X  |  X   |
-            // | X  |  X  |  X  |  X  |  X  |  X  |   |  X  |  X  |  X  |  X  |  X  |  X   |
-            // | X  |  X  |  X  |  X  |  X  |  X  |   |  X  |  X  |  X  |  X  |  X  |  X   |
-            //                  |  X  |  X  |  X  |   |  X  |  X  |  X  |
-           
-            
-            bindings = <
-                &trans     &trans       &trans  &trans   &trans       &trans                      &trans       &trans          &trans    &trans  &trans    &trans
-                &trans     &trans       &trans  &trans   &trans       &trans                      &trans       &trans          &trans    &trans  &trans    &trans
-                &trans     &trans       &trans  &trans   &trans       &trans                      &trans       &trans          &trans    &trans  &trans    &trans
-                                                &trans   &trans       &trans                      &trans       &trans          &trans  
-            >;
-        };             
 
         numpad_layer {
             label = "NUMPAD";
             // -----------------------------------------------------------------------------------------
-            //    |    X  | BT_NXT | WIN | MAC |  X  | PRINTMAC|      |  *  |  7   |  8  |  9  |  +   |  BSPC   |
+            //    |    X  | BT_NXT |  X  |  X  |  X  | PRINTMAC|      |  *  |  7   |  8  |  9  |  +   |  BSPC   |
             //    |    X  |    X   |  X  |  X  |  X  | X       |      |  =  |  4   |  5  |  6  |  -   |  ENTER  |
             //    |    X  |    X   |  X  |  X  |  X  | OUT_TOG |      |  0  |  1   |  2  |  3  |  .   |   L3    |
             //                           |  L1 | ALT |     X   |      |  X  |  X   |  L2 |
             bindings = < 
-               &trans    &bt BT_NXT   &tog WIN      &tog MAC     &trans       &kp LG(LS(N5))     &kp FR_ASTR  &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_PLUS   &kp BSPC
-               &trans    &trans      &trans        &trans       &trans       &trans             &kp FR_EQL   &kp FR_4 &kp FR_5 &kp FR_6 &kp FR_MINS   &kp ENTER
+               &trans    &bt BT_NXT   &trans        &trans       &trans       &kp LG(LS(N5))     &kp FR_ASTR  &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_PLUS   &kp BSPC
+               &trans    &trans       &trans        &trans       &trans       &trans             &kp FR_EQL   &kp FR_4 &kp FR_5 &kp FR_6 &kp FR_MINS   &kp ENTER
                &trans    &trans       &trans        &trans       &trans       &out OUT_TOG       &kp FR_0     &kp FR_1 &kp FR_2 &kp FR_3 &kp FR_DOT    &to_L3_from_L4
                                                                           &to_L1_from_L4 &kp LALT &trans    &trans &trans &to_L2_from_L4
                         >;

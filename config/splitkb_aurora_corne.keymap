@@ -222,21 +222,18 @@
             timeout-ms = <50>;
             key-positions = <25 26>;
             bindings = <&kp LG(X)>;
-            layers = <MAC>;
         };
 
         combo_copy_mac { // YÈ
             timeout-ms = <50>;
             key-positions = <26 27>;
             bindings = <&kp LG(C)>;
-            layers = <MAC>;
         };
 
         combo_paste_mac { // È‧
             timeout-ms = <50>;
             key-positions = <27 28>;
             bindings = <&kp LG(V)>;
-            layers = <MAC>;
         };
 
         combo_dash { // DL

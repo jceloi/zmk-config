@@ -245,39 +245,39 @@
         combo_mo_symb { // TS
             timeout-ms = <10>;
             key-positions = <19 20>;
-            bindings = <&sl L2>;
+            bindings = <&lt L2>;
         };
 
 
         combo_mo_nav { // SR
             timeout-ms = <10>;
             key-positions = <20 21>;
-            bindings = <&sl L3>;
+            bindings = <&lt L3>;
         };
 
         combo_mo_num { // TR
             timeout-ms = <10>;
             key-positions = <19 21>;
-            bindings = <&sl L4>;
+            bindings = <&lt L4>;
         };
 
         combo_mo_symb_l { // TS
             timeout-ms = <10>;
             key-positions = <15 16>;
-            bindings = <&sl L2>;
+            bindings = <&lt L2>;
         };
 
 
         combo_mo_nav_l { // SR
             timeout-ms = <10>;
             key-positions = <14 15>;
-            bindings = <&sl L3>;
+            bindings = <&lt L3>;
         };
 
         combo_mo_num_l { // TR
             timeout-ms = <10>;
             key-positions = <14 16>;
-            bindings = <&sl L4>;
+            bindings = <&lt L4>;
         };
 
         combo_clear_bt { //àjo

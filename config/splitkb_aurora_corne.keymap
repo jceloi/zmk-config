@@ -243,39 +243,39 @@
         };
 
         combo_mo_symb { // TS
-            timeout-ms = <10>;
+            timeout-ms = <30>;
             key-positions = <19 20>;
             bindings = <&mo L2>;
         };
 
 
         combo_mo_nav { // SR
-            timeout-ms = <10>;
+            timeout-ms = <30>;
             key-positions = <20 21>;
             bindings = <&mo L3>;
         };
 
         combo_mo_num { // TR
-            timeout-ms = <10>;
+            timeout-ms = <30>;
             key-positions = <19 21>;
             bindings = <&mo L4>;
         };
 
         combo_mo_symb_l { // TS
-            timeout-ms = <10>;
+            timeout-ms = <30>;
             key-positions = <15 16>;
             bindings = <&mo L2>;
         };
 
 
         combo_mo_nav_l { // SR
-            timeout-ms = <10>;
+            timeout-ms = <30>;
             key-positions = <14 15>;
             bindings = <&mo L3>;
         };
 
         combo_mo_num_l { // TR
-            timeout-ms = <10>;
+            timeout-ms = <30>;
             key-positions = <14 16>;
             bindings = <&mo L4>;
         };

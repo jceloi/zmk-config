@@ -286,6 +286,12 @@
             bindings = <&bt BT_CLR>;
         };
 
+        combo_zmk_sudio { //qx
+            timeout-ms = <30>;
+            key-positions = <10 11>;
+            bindings = <&studio_unlock>;
+        };
+
         combo_cedille { // cm
             timeout-ms = <30>;
             key-positions = <31 32>;

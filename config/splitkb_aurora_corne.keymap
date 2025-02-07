@@ -96,7 +96,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "EXCUMFLEX";
             #binding-cells = <0>;
-            bindings = <&kp OP_DCIRC>, <&kp OP_EXLM>;
+            bindings = <&kp OP_DCIR>, <&kp OP_EXLM>;
             mods = <(MOD_LSFT)>;
         };
         virgpts: virgpts {

@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/rgb.h>
-#include "keymap_french.h"
+#include "keymap_optimot.h"
 
 #define L1  0
 #define L4  1
@@ -96,28 +96,28 @@
             compatible = "zmk,behavior-mod-morph";
             label = "EXCUMFLEX";
             #binding-cells = <0>;
-            bindings = <&kp FR_CIRC>, <&kp FR_EXLM>;
+            bindings = <&kp OP_DCIRC>, <&kp OP_EXLM>;
             mods = <(MOD_LSFT)>;
         };
         virgpts: virgpts {
             compatible = "zmk,behavior-mod-morph";
             label = "VIRGPTS";
             #binding-cells = <0>;
-            bindings = <&kp FR_COMM>, <&kp FR_SCLN>;
+            bindings = <&kp OP_COMM>, <&kp OP_SCLN>;
             mods = <(MOD_LSFT)>;
         };
         points: points {
             compatible = "zmk,behavior-mod-morph";
             label = "POINTS";
             #binding-cells = <0>;
-            bindings = <&kp FR_DOT>, <&kp FR_COLN>;
+            bindings = <&kp OP_DOT>, <&kp OP_COLN>;
             mods = <(MOD_LSFT)>;
         };
         questionstrophe: questionstrophe {
             compatible = "zmk,behavior-mod-morph";
             label = "QUESTIONSTROPHE";
             #binding-cells = <0>;
-            bindings = <&kp FR_QUOT>, <&kp FR_QUES>;
+            bindings = <&kp OP_QUOT>, <&kp OP_QUES>;
             mods = <(MOD_LSFT)>;
         };
     };
@@ -239,7 +239,7 @@
         combo_dash { // DL
             timeout-ms = <50>;
             key-positions = <7 8>;
-            bindings = <&kp FR_MINS>;
+            bindings = <&kp OP_MINS>;
         };
 
         combo_mo_symb { // TS
@@ -295,13 +295,13 @@
         combo_cedille { // cm
             timeout-ms = <30>;
             key-positions = <31 32>;
-            bindings = <&kp FR_CCED>;
+            bindings = <&kp OP_CCED>;
         };
 
         combo_ugrave { // u,
             timeout-ms = <30>;
             key-positions = <16 17>;
-            bindings = <&kp FR_UGRV>;
+            bindings = <&kp OP_UGRV>;
         };
 
         combo_oe { // oe
@@ -324,9 +324,9 @@
            
             
             bindings = <
-                &kp TAB     &kp FR_AGRV    &kp J  &kp O        &kp FR_EACU    &kp B           &kp F       &kp D    &kp L       &questionstrophe  &kp FR_Q &kp X
-                &kp ESC     &kp FR_A       &kp I  &kp E        &kp U          &virgpts        &kp P       &kp T     &kp S       &kp R             &kp N    &excumflex
-                &kp LCTRL   &kp FR_K       &kp Y  &kp FR_EGRV  &points        &kp FR_W        &kp FR_G    &kp C    &kp FR_M    &kp H             &kp V    &kp FR_Z
+                &kp TAB     &kp OP_AGRV    &kp OP_J  &kp OP_O        &kp OP_EACU    &kp OP_B           &kp OP_F       &kp OP_D    &kp OP_L       &questionstrophe  &kp OP_Q &kp OP_X
+                &kp ESC     &kp OP_A       &kp OP_I  &kp OP_E        &kp OP_U          &virgpts        &kp OP_P       &kp OP_T     &kp OP_S       &kp OP_R             &kp OP_N    &excumflex
+                &kp LCTRL   &kp OP_K       &kp OP_Y  &kp OP_EGRV  &points        &kp OP_W        &kp OP_G    &kp OP_C    &kp OP_M    &kp OP_H             &kp V    &kp OP_Z
                                    &kp LWIN &kp LSHIFT &kp SPACE   &kp BSPC &kp ENTER &tog L2  
             >;
         };
@@ -340,9 +340,9 @@
             //    |    X  |    X   |  X  |  X  |  X  | OUT_TOG |      |  0  |  1   |  2  |  3  |  .   |   L3    |
             //                           |  L1 | ALT |     X   |      |  X  |  X   |  L2 |
             bindings = < 
-               &trans    &bt BT_NXT   &trans        &trans       &trans       &kp LG(LS(N5))     &kp FR_ASTR  &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_PLUS   &kp BSPC
-               &trans    &trans       &trans        &trans       &trans       &trans             &kp FR_EQL   &kp FR_4 &kp FR_5 &kp FR_6 &kp FR_MINS   &kp ENTER
-               &trans    &trans       &trans        &trans       &trans       &out OUT_TOG       &kp FR_0     &kp FR_1 &kp FR_2 &kp FR_3 &kp FR_DOT    &to_L3_from_L4
+               &trans    &bt BT_NXT   &trans        &trans       &trans       &kp LG(LS(N5))     &kp OP_ASTR  &kp OP_7 &kp OP_8 &kp OP_9 &kp OP_PLUS   &kp BSPC
+               &trans    &trans       &trans        &trans       &trans       &trans             &kp OP_EQL   &kp OP_4 &kp OP_5 &kp OP_6 &kp OP_HMIN   &kp ENTER
+               &trans    &trans       &trans        &trans       &trans       &out OUT_TOG       &kp OP_0     &kp OP_1 &kp OP_2 &kp OP_3 &kp OP_DOT    &to_L3_from_L4
                                                                           &to_L1_from_L4 &kp LALT &trans    &trans &trans &to_L2_from_L4
                         >;
                 };
@@ -355,9 +355,9 @@
             //    |  X  |  €  |  #  |  %  |  +  |   ²   |   |  [  |  (   |  )  |  ]  |  ↑  |   L3   |
             //                       | L1 | ALT |   X   |   |  X  |  X   | L4 |
             bindings = < 
-               &trans    &kp FR_AT    &kp FR_QUOT  &kp FR_DQUO    &kp FR_ASTR  &kp FR_GRV       &kp FR_PIPE  &kp FR_MINS &kp FR_UNDS &kp FR_AMPR &kp FR_DEG  &kp BSPC
-               &trans    &kp FR_TILD  &kp FR_LABK  &kp FR_RABK    &kp FR_EQL   &kp FR_DLR       &kp FR_BSLS  &kp FR_LCBR &kp FR_RCBR &kp FR_SLSH &kp FR_TILD &kp FR_DIAE
-               &trans    &kp FR_EURO  &kp FR_HASH  &kp FR_PERC    &kp FR_PLUS  &kp FR_SUP2      &kp FR_LBRC  &kp FR_LPRN &kp FR_RPRN &kp FR_RBRC &kp UP     &to_L3_from_L2
+               &trans    &kp OP_AT    &kp OP_QUOT  &kp OP_DQUO    &kp OP_ASTR  &kp OP_GRV       &kp OP_PIPE  &kp OP_MINS &kp OP_UNDS &kp OP_AMPR &kp OP_DEG  &kp BSPC
+               &trans    &kp OP_TILD  &kp OP_LABK  &kp OP_RABK    &kp OP_EQL   &kp OP_DLR       &kp OP_BSLS  &kp OP_LCBR &kp OP_RCBR &kp OP_SLSH &kp OP_TILD &kp OP_DIAE
+               &trans    &kp OP_EURO  &kp OP_HASH  &kp OP_PERC    &kp OP_PLUS  &kp OP_SUP2      &kp OP_LBRC  &kp OP_LPRN &kp OP_RPRN &kp OP_RBRC &kp UP     &to_L3_from_L2
                                                      &to_L1_from_L2 &kp LALT &trans    &trans &trans &to_L4_from_L2
                 >;
              };

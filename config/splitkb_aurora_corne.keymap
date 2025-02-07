@@ -324,7 +324,7 @@
            
             
             bindings = <
-                &kp TAB     &kp OP_AGRV    &kp OP_J  &kp OP_O        &kp OP_EACU    &kp OP_B           &kp OP_F       &kp OP_D    &kp OP_L       &kp OP_QUES  &kp OP_Q &kp OP_X
+                &kp TAB     &kp OP_AGRV    &kp OP_J  &kp OP_O        &kp OP_EACU    &kp OP_B           &kp OP_F       &kp OP_D    &kp OP_L       &kp OP_QUOT  &kp OP_Q &kp OP_X
                 &kp ESC     &kp OP_A       &kp OP_I  &kp OP_E        &kp OP_Z       &kp OP_COMM       &kp OP_P       &kp OP_T     &kp OP_S       &kp OP_R             &kp OP_N    &kp OP_DCIR
                 &kp LCTRL   &kp OP_K       &kp OP_Y  &kp OP_EGRV  &kp OP_DOT       &kp OP_W        &kp OP_G    &kp OP_C    &kp OP_M    &kp OP_H             &kp OP_V    &kp OP_Z
                                    &kp LWIN &kp LSHIFT &kp SPACE   &kp BSPC &kp ENTER &tog L2  

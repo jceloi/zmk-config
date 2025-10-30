@@ -37,7 +37,8 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define FR_SUP2 GRAVE   // ²
+//FIX MAC ?
+#define FR_SUP2 NUBS   // ²
 #define FR_AMPR N1    // &
 #define FR_EACU N2    // é
 #define FR_DQUO N3    // "
@@ -77,7 +78,8 @@
 #define FR_UGRV SQT  // ù
 #define FR_ASTR NUHS // *
 // Row 4
-#define FR_LABK NUBS // <
+//FIX MAC ?
+#define FR_LABK GRAVE // <
 #define FR_W    Z    // W
 #define FR_X    X    // X
 #define FR_C    C    // C
